@@ -1,0 +1,125 @@
+body {
+            background-color: #3d5a80;
+            color: white;
+            margin: 0;
+            font-family: "Arial", sans-serif;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 3% 0 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 8%;
+        }
+
+        .ubb {
+            color: #ee6c4d;
+            font-size: 2.4vw;
+            margin-right: 0.5%;
+        }
+
+        .oard {
+            color: #293241;
+            font-size: 2.4vw;
+        }
+
+        .button-container-menu {
+            text-align: right;
+            margin-right: 12%;
+            width: 60%;
+        }
+
+        .button {
+            background-color: #3d5a80;
+            color: white;
+            border: none;
+            padding: 1% 2%;
+            margin: 0.5%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .overlay {
+            background-color: #d9d9d9;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5%;
+            padding: 2%;
+            box-sizing: content-box;
+        }
+
+        .title-overlay {
+            color: #3d5a80;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        .course-container {
+            margin-top: 5%;
+            display: flex;
+            padding-left: 7%;
+            padding-right: 7%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .course-title {
+            color: #293241;
+            font-size: x-large;
+            font-weight: bold;
+            margin-bottom: 5%;
+            text-align: center;
+            width: 100%;
+        }
+
+        .course-window {
+            background-color: white;
+            display: flex;
+            width: 45%;
+            margin-bottom: 5%;
+            box-shadow: 0 2px 4px #293241;
+        }
+
+        .blue-ribbon {
+            background-color: #3d5a80;
+            width: 8%;
+            margin: 0;
+        }
+
+        .course-details {
+            margin-left: 10%;
+            margin-bottom: 15%;
+            margin-top: 10%;
+            width: 92%;
+            text-align: right;
+        }
+
+        .title {
+            font-size: large;
+            text-align: center;
+            color: #3d5a80;
+            font-weight: bold;
+            margin-bottom: 3%;
+            width: 92%;
+        }
+
+        .subtitle {
+            font-size: x-large;
+            color: #3d5a80;
+            text-align: center;
+            margin-bottom: 7%;
+            font-weight: bold;
+            width: 92%;
+        }
+
+        .text {
+            color: #293241;
+            margin-top: 3%;
+            text-align: left;
+        }

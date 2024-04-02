@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="ui.css">
+    <title>vizListe</title>
+    <script src="https://unpkg.com/htmx.org@1.6.1/dist/htmx.min.js"></script>
+    <script>
+        src="script_ui.js"
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <div class="logo-container">
+        <span class="ubb">UBB</span>
+        <span class="oard">oard</span>
+    </div>
+    <div class="button-container-menu">
+        <button class="button">Membrii</button>
+        <button class="button">Cursuri</button>
+        <button class="button">Contul meu</button>
+    </div>
+</div>
+<div class="overlay">
+    <div class="title-overlay">Cursurile mele</div>
+        <div class="course-container">
+            <div class="course-title">Obligatorii</div>
+            <div id="obligatoryCoursesContainer">
+            </div>
+                <div class="course-window">
+                    <div class="blue-ribbon"></div>
+                    <div class="course-details">
+                        <div class="title">Nume Curs</div>
+                        <div class="subtitle">NCR</div>
+                        <div class="text">Profesor</div>
+                        <div class="text">Credite</div>
+                    </div>
+                </div>
+                <div class="course-window">
+                    <div class="blue-ribbon"></div>
+                    <div class="course-details">
+                        <div class="title">Nume Curs</div>
+                        <div class="subtitle">NCR</div>
+                        <div class="text">Profesor</div>
+                        <div class="text">Credite</div>
+                    </div>
+                </div>
+        </div>
+        <div class="course-container">
+            <div class="course-title">Optionale</div>
+            <div id="optionalCoursesContainer">
+            </div>
+        </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Actualizare Cont</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/htmx.org/dist/htmx.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/hyperscript.org/dist/_hyperscript.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="centered header">
+        <p class="title" style="font-weight: bold"><span class="orange-text">UBB</span><span class="black-text">oard</span></p>
+        <div class="menus">
+            <div class="dropdown">
+                <button class="dropdown-button">Membri</button>
+                <div class="dropdown-content">
+                    <a href="#">Toti Membri</a>
+                    <a href="#">Elevi</a>
+                    <a href="#">Profesori</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">Cursuri</button>
+                <div class="dropdown-content">
+                    <a href="#">Cursurile Mele</a>
+                    <a href="#">Toate Cursurile</a>
+                    <a href="#">Cursuri Optionale</a>
+                    <a href="#">Cursuri Obligatorii</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-button">Contul Meu</button>
+                <div class="dropdown-content">
+                    <a href="http://localhost:8080/updateUser.html">Contul Meu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+    <div class="centered content">
+
+        <p class="title">Actualizare Cont</p>
+
+        <input type="email" id="email1" name="email1" required placeholder="Current E-mail" style="width: 85%">
+
+        <script>
+            function getCurrentUser() {
+                // Get the value from the email1 input field
+                return document.getElementById("email1").value;
+            }
+
+            document.addEventListener('htmx:afterRequest', function(evt) {
+                if (evt.detail.target.id === 'registrationForm') {
+                if(evt.detail.xhr.status === 404){
+                    /* Notify the user of a 404 Not Found response */
+                    return alert("Error: Could Not Find Resource");
+                }
+                if (evt.detail.successful !== true) {
+                    /* Notify of an unexpected error, & print error to console */
+                    alert("Unexpected Error");
+                    return console.error(evt);
+                }
+                if (evt.detail.target.id === 'registrationForm') {
+                    var responseData = JSON.parse(evt.detail.xhr.response);
+                    document.getElementById('lastname').value = responseData.lastname;
+                    document.getElementById('firstname').value = responseData.firstname;
+                    document.getElementById('email').value = responseData.email;
+                    document.getElementById('role').value = responseData.role;
+                }
+            }});
+        </script>
+
+        <!-- Add a button to trigger the getInfo action -->
+        <!-- hx-vals should be changed to get the email of the user that's currently logged in -->
+        <button type="button" hx-get="/users/user" hx-trigger="click" hx-target="#registrationForm" hx-vals="js:{email: getCurrentUser()}"  hx-swap="none">Get User Info</button>
+
+        <form id="registrationForm" hx-put="/users/user" hx-trigger="submit" hx-headers="{'Content-Type': 'application/json'}" hx-swap="none ">
+            <!-- Use hx-post to specify the endpoint for form submission -->
+            <input type="text" id="lastname" name="lastname" required placeholder="Last Name" readonly>
+
+            <input type="text" id="firstname" name="firstname" required placeholder="First Name" readonly>
+
+            <input type="email" id="email" name="email" required placeholder="E-mail" readonly>
+
+            <input type="password" id="password" name="password" required placeholder="New Password">
+
+            <div>
+                <select id="role" name="role" required disabled>
+                    <option value="STD">Student</option>
+                    <option value="ADM">Admin</option>
+                    <option value="PROF">Teacher</option>
+                </select>
+            </div>
+
+            <!-- Add a button to trigger the updateUser action -->
+            <button type="submit">Update my Info</button>
+
+        </form>
+    </div>
+</body>
+</html>

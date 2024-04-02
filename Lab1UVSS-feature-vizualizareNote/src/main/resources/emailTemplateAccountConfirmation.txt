@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<br><br>
+<body>
+Hello {name}, <br><br>
+Your user account has been created successfully. <br>
+Your initial password is {password}. <br>
+You can set a new password or manage your account in the application.
+<br><br> UBB Class Management Team
+</body>
+</html>

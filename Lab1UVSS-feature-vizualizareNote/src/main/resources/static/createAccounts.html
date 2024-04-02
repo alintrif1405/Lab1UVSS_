@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX-Demo</title>
+
+    <link rel="stylesheet" href="createAccounts.css">
+
+    <script src="https://kit.fontawesome.com/3c8aef11b9.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@1.7.0/dist/htmx.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="../book_stack_1.png" alt="poza cu carti">
+    </div>
+
+    <div class="login-container">
+        <div class="form-title">
+            <h1 class="ubb">UBB</h1>
+            <h1>oard</h1>
+        </div>
+        <h3>Your virtual Course Catalog</h3>
+        <form name="createAccount" hx-post="http://localhost:8080/users/register" hx-target=".create-user-message">
+            <label>
+                <input class="form-group" name="firstname" type="text" placeholder="First name">
+            </label>
+
+            <label>
+                <input class="form-group" name="lastname" type="text" placeholder="Last name">
+            </label>
+
+            <label>
+                <input class="form-group" name="email" type="text" placeholder="Email">
+            </label>
+
+            <div class="password-container form-group">
+                <label>
+                    <input class="password-input" name="password" type="password" placeholder="Password">
+                </label>
+
+            </div>
+
+            <label>Role
+                <select class="form-group select-menu" name="role">
+                    <option value="STD">User</option>
+                    <option value="PROF">Teacher</option>
+                    <option value="ADM">Admin</option>
+                </select>
+            </label>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="create-user-message"></div>
+    </div>
+
+</div>
+</body>
+</html>

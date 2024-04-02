@@ -1,0 +1,153 @@
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+.form-title{
+    margin: 0;
+    display: flex;
+    white-space: nowrap;
+}
+.form-title h1{
+    margin: 0;
+}
+
+.login-container h3{
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.ubb{
+    color:#ee6c4d;
+}
+.login-container {
+    width: 50%;
+    max-width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-left:100px;
+}
+
+.login-container input{
+    outline: none;
+    background-color: transparent;
+    border-width: 0 0 3px 0;
+}
+
+.image-container{
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    background-color:#405c84;
+
+}
+.image-container img{
+    width: 293px;
+    height: 293px;
+    padding:200px 200px 250px 200px;
+}
+.passsword-container{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 300px auto;
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.password-container .show-password{
+    cursor:pointer;
+}
+
+
+.form-group {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.select-menu {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #495057;
+}
+.select-menu::-ms-expand {
+    display: none;
+}
+
+.select-menu:hover {
+    border-color: #6c757d;
+}
+
+.select-menu option {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+button:hover{
+    background-color:#ee6c4d;
+    color:white;
+    transition: 0.5s;
+}
+
+form{
+    padding-top:50px;
+    text-align: center;
+    align-items: center;
+}
+
+.create-user-message{
+    padding-top:25px;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    color:#ee6c4d;
+}
+
+input:focus::placeholder{
+    color: #ee6c4d;
+    transition: 0.7s;
+}
